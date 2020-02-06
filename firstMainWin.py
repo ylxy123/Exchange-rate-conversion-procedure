@@ -14,9 +14,6 @@ class Ui_name(object):
     def setupUi(self, name):
         name.setObjectName("name")
         name.resize(671, 595)
-        self.pushButton = QtWidgets.QPushButton(name)
-        self.pushButton.setGeometry(QtCore.QRect(190, 520, 301, 41))
-        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(name)
         QtCore.QMetaObject.connectSlotsByName(name)
@@ -24,4 +21,3 @@ class Ui_name(object):
     def retranslateUi(self, name):
         _translate = QtCore.QCoreApplication.translate
         name.setWindowTitle(_translate("name", "Form"))
-        self.pushButton.setText(_translate("name", "关    闭"))
