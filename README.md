@@ -1,15 +1,12 @@
 # 汇率转换程序
 ---
 ### 支持货币种类：
-		港元 HKD
-		澳门元 MOP
-		台币 TWD
-		欧元 EUR
-		美元 USD
-		英镑 GBP
-		韩元 KRW
-		日元 JPY
-		离岸人民币 CNH
-		加拿大元 CAD
-		卢布 RUB
+        美元 USD
+        韩元 KRW
+        日元 JPY
+	    港币 HKD
+	    英镑 GBP
+	    欧元 EUR
+	    加拿大元 CAD
+	    澳大利亚元 AUD
 		
