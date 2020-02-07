@@ -1,18 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>name</class>
- <widget class="QWidget" name="name">
+ <author>ylxy</author>
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>671</width>
-    <height>595</height>
+    <width>292</width>
+    <height>249</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>汇率查询</string>
   </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>201</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>当日实时汇率查询</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>货币名称</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>美元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>韩元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>日元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>港币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>英镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>欧元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>加拿大元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>澳大利亚元</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="comboBox_2">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>130</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>查询类别</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>现汇买入价</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>现钞买入价</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>现钞卖出价</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>中行折算价</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
