@@ -1,45 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <author>ylxy</author>
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Exchange</class>
+ <widget class="QWidget" name="Exchange">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>292</width>
-    <height>249</height>
+    <width>461</width>
+    <height>586</height>
    </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
   </property>
   <property name="windowTitle">
    <string>汇率查询</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="label_1">
    <property name="geometry">
     <rect>
      <x>50</x>
      <y>20</y>
-     <width>201</width>
+     <width>231</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>楷体</family>
-     <pointsize>14</pointsize>
+     <pointsize>16</pointsize>
     </font>
    </property>
    <property name="text">
     <string>当日实时汇率查询</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="cur_name">
    <property name="geometry">
     <rect>
      <x>40</x>
      <y>130</y>
-     <width>101</width>
-     <height>22</height>
+     <width>151</width>
+     <height>31</height>
     </rect>
    </property>
    <item>
@@ -88,13 +91,13 @@
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="comboBox_2">
+  <widget class="QComboBox" name="cur_class">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>220</x>
      <y>130</y>
-     <width>101</width>
-     <height>22</height>
+     <width>161</width>
+     <height>31</height>
     </rect>
    </property>
    <item>
@@ -123,12 +126,524 @@
     </property>
    </item>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="cur_inquiry">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>170</y>
-     <width>221</width>
+     <y>180</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查      询</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="display_bar1">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>220</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>世界流通货币缩写查询</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="display_bar2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>270</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="get_cur_name">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>320</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>货币名称</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>人民币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>美元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>日元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>欧元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>英镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>韩元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>港币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>澳大利亚元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>加拿大元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿尔及利亚第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿根廷比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>爱尔兰镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>埃及镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿联酋迪拉姆</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿曼里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>奥地利先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>澳门元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>百慕大元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴基斯坦卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴拉圭瓜拉尼</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴林第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴拿马巴尔博亚</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>保加利亚列弗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴西雷亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>比利时法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>冰岛克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>博茨瓦纳普拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>波兰兹罗提</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>玻利维亚诺</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>丹麦克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>德国马克</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>法国法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>菲律宾比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>芬兰马克</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>哥伦比亚比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>古巴比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>哈萨克坚戈</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>荷兰盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>加纳塞地</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>捷克克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>津巴布韦元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>卡塔尔里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>克罗地亚库纳</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>肯尼亚先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>科威特第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>老挝基普</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>拉脱维亚拉图</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>黎巴嫩镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>林吉特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>立陶宛立特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>卢布</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>罗马尼亚新列伊</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>毛里求斯卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>蒙古图格里特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>孟加拉塔卡</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>缅甸缅元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>秘鲁新索尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>摩洛哥迪拉姆</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>墨西哥元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>南非兰特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>挪威克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>葡萄牙埃斯库多</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>瑞典克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>瑞士法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>沙特里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>斯里兰卡卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>索马里先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>泰铢</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>坦桑尼亚先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新土耳其里拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>突尼斯第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>危地马拉格查尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>委内瑞拉玻利瓦尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>乌拉圭新比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>西班牙比塞塔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>希腊德拉克马</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新加坡元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新台币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新西兰元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>匈牙利福林</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>牙买加元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>义大利里拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>印度卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>印尼盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>以色列谢克尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>约旦第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>越南盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>智利比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>白俄罗斯卢布</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="name_inquiry">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>320</y>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>
@@ -136,17 +651,1039 @@
     <string>查询</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>50</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>（交易单位：100）</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="icon">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>450</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/新前缀/汇率转换.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="display_bar3">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>80</y>
-     <width>221</width>
+     <y>430</y>
+     <width>341</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
+  <widget class="QComboBox" name="from_cur">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>480</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>货币名称</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>人民币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>美元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>日元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>欧元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>英镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>韩元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>港币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>澳大利亚元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>加拿大元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿尔及利亚第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿根廷比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>爱尔兰镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>埃及镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿联酋迪拉姆</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿曼里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>奥地利先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>澳门元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>百慕大元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴基斯坦卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴拉圭瓜拉尼</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴林第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴拿马巴尔博亚</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>保加利亚列弗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴西雷亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>比利时法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>冰岛克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>博茨瓦纳普拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>波兰兹罗提</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>玻利维亚诺</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>丹麦克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>德国马克</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>法国法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>菲律宾比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>芬兰马克</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>哥伦比亚比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>古巴比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>哈萨克坚戈</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>荷兰盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>加纳塞地</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>捷克克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>津巴布韦元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>卡塔尔里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>克罗地亚库纳</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>肯尼亚先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>科威特第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>老挝基普</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>拉脱维亚拉图</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>黎巴嫩镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>林吉特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>立陶宛立特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>卢布</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>罗马尼亚新列伊</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>毛里求斯卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>蒙古图格里特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>孟加拉塔卡</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>缅甸缅元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>秘鲁新索尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>摩洛哥迪拉姆</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>墨西哥元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>南非兰特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>挪威克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>葡萄牙埃斯库多</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>瑞典克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>瑞士法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>沙特里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>斯里兰卡卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>索马里先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>泰铢</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>坦桑尼亚先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新土耳其里拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>突尼斯第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>危地马拉格查尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>委内瑞拉玻利瓦尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>乌拉圭新比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>西班牙比塞塔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>希腊德拉克马</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新加坡元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新台币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新西兰元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>匈牙利福林</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>牙买加元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>义大利里拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>印度卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>印尼盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>以色列谢克尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>约旦第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>越南盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>智利比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>白俄罗斯卢布</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="to_cur">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>480</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>货币名称</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>人民币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>美元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>日元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>欧元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>英镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>韩元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>港币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>澳大利亚元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>加拿大元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿尔及利亚第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿根廷比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>爱尔兰镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>埃及镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿联酋迪拉姆</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>阿曼里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>奥地利先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>澳门元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>百慕大元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴基斯坦卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴拉圭瓜拉尼</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴林第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴拿马巴尔博亚</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>保加利亚列弗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>巴西雷亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>比利时法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>冰岛克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>博茨瓦纳普拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>波兰兹罗提</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>玻利维亚诺</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>丹麦克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>德国马克</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>法国法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>菲律宾比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>芬兰马克</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>哥伦比亚比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>古巴比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>哈萨克坚戈</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>荷兰盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>加纳塞地</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>捷克克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>津巴布韦元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>卡塔尔里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>克罗地亚库纳</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>肯尼亚先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>科威特第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>老挝基普</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>拉脱维亚拉图</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>黎巴嫩镑</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>林吉特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>立陶宛立特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>卢布</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>罗马尼亚新列伊</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>毛里求斯卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>蒙古图格里特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>孟加拉塔卡</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>缅甸缅元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>秘鲁新索尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>摩洛哥迪拉姆</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>墨西哥元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>南非兰特</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>挪威克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>葡萄牙埃斯库多</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>瑞典克朗</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>瑞士法郎</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>沙特里亚尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>斯里兰卡卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>索马里先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>泰铢</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>坦桑尼亚先令</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新土耳其里拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>突尼斯第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>危地马拉格查尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>委内瑞拉玻利瓦尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>乌拉圭新比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>西班牙比塞塔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>希腊德拉克马</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新加坡元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新台币</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新西兰元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>匈牙利福林</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>牙买加元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>义大利里拉</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>印度卢比</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>印尼盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>以色列谢克尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>约旦第纳尔</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>越南盾</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>智利比索</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>白俄罗斯卢布</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>370</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>楷体</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>实时汇率转换 Exchange</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exchange_inquiry">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>520</y>
+     <width>341</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查      询</string>
+   </property>
+  </widget>
  </widget>
- <resources/>
- <connections/>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>get_cur_name</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>display_bar2</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>name_inquiry</sender>
+   <signal>clicked()</signal>
+   <receiver>display_bar2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

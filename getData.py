@@ -20,20 +20,30 @@ def getdata(url):
         print(data[i])
 
 # 货币缩写查询
-def getmoney(url, currency):
-    r = requests.get(url)
+def getmoneyname(money):
+    with open('moneylist.txt', 'r', encoding='utf-8') as f:
+        content = f.readlines()
+        money_dict = ''
+        for line in content:
+            money_dict += line.strip('\n').strip(' ')
+        money_dict = eval(money_dict)
+    return money_dict[money]
+
+
+# 实时汇率查询转换
+def cur_exchange(appkey, former, new):
+    url = 'http://op.juhe.cn/onebox/exchange/currency'
+    r = requests.get(url+'?key='+appkey+'&from='+former+'&to='+new)
     response_dict = r.json()
-    money = response_dict['result']['list']
-    a = []
-    b = []
-    for i in range(len(money)):
-        a.append(money[i]['name'])
-        b.append(money[i]['code'])
-    money_dict = dict(zip(a,b))
-    print(money_dict[currency])
-    return money_dict[currency]
+
+    if response_dict:
+        error_code = response_dict['error_code']
+        if error_code == 0:
+            # 请求成功
+            return "1:" + response_dict['result'][0]['result']
+        else:
+            print("%s：%s" %(response_dict['error_code'], response_dict['reason']))
+    else:
+        print("appkey错误")
 
 
-if __name__ == "__main__":
-    getdata('http://op.juhe.cn/onebox/exchange/query?key=cd0ddf0d24e0291f18d0d519d04700af')
-    getmoney('http://op.juhe.cn/onebox/exchange/list?key=cd0ddf0d24e0291f18d0d519d04700af', '人民币')
