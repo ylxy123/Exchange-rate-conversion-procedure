@@ -8,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>432</width>
-    <height>534</height>
+    <height>545</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -1637,6 +1637,32 @@
    </property>
    <property name="text">
     <string>查      询</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="timelabel">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>510</y>
+     <width>251</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>510</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>当前系统时间：</string>
    </property>
   </widget>
  </widget>

@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Exchange(object):
     def setupUi(self, Exchange):
         Exchange.setObjectName("Exchange")
-        Exchange.resize(432, 534)
+        Exchange.resize(432, 545)
         Exchange.setMouseTracking(True)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("汇率.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -365,6 +365,12 @@ class Ui_Exchange(object):
         self.exchange_inquiry = QtWidgets.QPushButton(Exchange)
         self.exchange_inquiry.setGeometry(QtCore.QRect(40, 460, 341, 31))
         self.exchange_inquiry.setObjectName("exchange_inquiry")
+        self.timelabel = QtWidgets.QLabel(Exchange)
+        self.timelabel.setGeometry(QtCore.QRect(160, 510, 251, 21))
+        self.timelabel.setObjectName("timelabel")
+        self.label = QtWidgets.QLabel(Exchange)
+        self.label.setGeometry(QtCore.QRect(40, 510, 111, 20))
+        self.label.setObjectName("label")
 
         self.retranslateUi(Exchange)
         QtCore.QMetaObject.connectSlotsByName(Exchange)
@@ -662,4 +668,6 @@ class Ui_Exchange(object):
         self.to_cur.setItemText(89, _translate("Exchange", "白俄罗斯卢布"))
         self.label_4.setText(_translate("Exchange", "实时汇率转换 Exchange"))
         self.exchange_inquiry.setText(_translate("Exchange", "查      询"))
+        self.timelabel.setText(_translate("Exchange", "TextLabel"))
+        self.label.setText(_translate("Exchange", "当前系统时间："))
 import icon_rc

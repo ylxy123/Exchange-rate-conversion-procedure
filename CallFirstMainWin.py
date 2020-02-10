@@ -5,6 +5,7 @@
 
 import sys
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
+from PyQt5.QtCore import QTimer, QDateTime
 from firstMainWin import Ui_Exchange
 from getData import *
 
@@ -19,6 +20,16 @@ class Exchange(QWidget, Ui_Exchange):
         self.setupUi(self)
         self.connecter()
         self.show()
+    # 显示动态时间
+        timer = QTimer(self)
+        timer.timeout.connect(self.showtime)
+        timer.start()
+
+    def showtime(self):
+        datetime = QDateTime.currentDateTime()
+        text = datetime.toString()
+        self.timelabel.setText(text)
+
 
 
     def showmoneyname(self, money):
