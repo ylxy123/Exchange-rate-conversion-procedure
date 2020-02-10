@@ -21,7 +21,6 @@ class Exchange(QWidget, Ui_Exchange):
         self.show()
 
 
-
     def showmoneyname(self, money):
         if money != '货币名称':
             self.display_bar2.setText(getmoneyname(money))
