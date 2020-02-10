@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>461</width>
-    <height>586</height>
+    <width>432</width>
+    <height>534</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -16,6 +16,10 @@
   </property>
   <property name="windowTitle">
    <string>汇率查询</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>汇率.png</normaloff>汇率.png</iconset>
   </property>
   <widget class="QLabel" name="label_1">
    <property name="geometry">
@@ -171,9 +175,9 @@
   <widget class="QLineEdit" name="display_bar2">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>220</x>
      <y>270</y>
-     <width>341</width>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
@@ -182,8 +186,8 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>320</y>
-     <width>161</width>
+     <y>270</y>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
@@ -638,19 +642,6 @@
     </property>
    </item>
   </widget>
-  <widget class="QPushButton" name="name_inquiry">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>320</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>查询</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
@@ -674,7 +665,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>450</y>
+     <y>390</y>
      <width>71</width>
      <height>71</height>
     </rect>
@@ -690,7 +681,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>430</y>
+     <y>370</y>
      <width>341</width>
      <height>31</height>
     </rect>
@@ -700,7 +691,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>480</y>
+     <y>420</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -1160,7 +1151,7 @@
    <property name="geometry">
     <rect>
      <x>240</x>
-     <y>480</y>
+     <y>420</y>
      <width>141</width>
      <height>21</height>
     </rect>
@@ -1619,8 +1610,8 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>370</y>
+     <x>80</x>
+     <y>320</y>
      <width>291</width>
      <height>41</height>
     </rect>
@@ -1639,7 +1630,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>520</y>
+     <y>460</y>
      <width>341</width>
      <height>31</height>
     </rect>
@@ -1652,38 +1643,5 @@
  <resources>
   <include location="icon.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>get_cur_name</sender>
-   <signal>currentIndexChanged(QString)</signal>
-   <receiver>display_bar2</receiver>
-   <slot>setText(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>140</x>
-     <y>331</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>215</x>
-     <y>292</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>name_inquiry</sender>
-   <signal>clicked()</signal>
-   <receiver>display_bar2</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>315</x>
-     <y>336</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>264</x>
-     <y>289</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

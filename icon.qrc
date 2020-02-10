@@ -2,4 +2,7 @@
   <qresource prefix="新前缀">
     <file>汇率转换.png</file>
   </qresource>
+  <qresource prefix="图标">
+    <file>汇率.png</file>
+  </qresource>
 </RCC>

@@ -7,8 +7,9 @@ import requests
 import csv
 
 # 常用货币汇率数据
-def getdata(url):
-    r = requests.get(url)
+def getdata(appkey, name, classes):
+    url = 'http://op.juhe.cn/onebox/exchange/query'
+    r = requests.get(url+'?key='+appkey)
     response_dict = r.json()
     data = response_dict['result']['list']
     with open('database.csv', 'w',encoding='utf-8') as f:
@@ -16,8 +17,7 @@ def getdata(url):
         csv_f.writerow(['货币名称','交易单位','现汇买入价','现钞买入价','现钞卖出价','中行折算价'])
         for i in data:
             csv_f.writerow(i)
-    for i in range(len(data)):
-        print(data[i])
+    return response_dict['result']['list'][name][classes]
 
 # 货币缩写查询
 def getmoneyname(money):
@@ -42,8 +42,9 @@ def cur_exchange(appkey, former, new):
             # 请求成功
             return "1:" + response_dict['result'][0]['result']
         else:
-            print("%s：%s" %(response_dict['error_code'], response_dict['reason']))
+            return "%s：%s" %(response_dict['error_code'], response_dict['reason'])
     else:
-        print("appkey错误")
+        return "appkey错误"
 
-
+if __name__ == "__main__":
+    getdata('cd0ddf0d24e0291f18d0d519d04700af', 1, 2)
