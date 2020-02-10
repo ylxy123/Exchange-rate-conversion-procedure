@@ -47,4 +47,4 @@ def cur_exchange(appkey, former, new):
         return "appkey错误"
 
 if __name__ == "__main__":
-    getdata('cd0ddf0d24e0291f18d0d519d04700af', 1, 2)
+    print(type(getdata('cd0ddf0d24e0291f18d0d519d04700af', 1, 2)))

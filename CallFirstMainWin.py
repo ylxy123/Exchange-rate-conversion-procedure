@@ -31,8 +31,8 @@ class Exchange(QWidget, Ui_Exchange):
     def cur_exchange_money(self, former, new):
         self.display_bar3.setText(cur_exchange(former, new))
 
-    def cur_inq(self, moneyname, moneyclass):
-        self.display_bar1.setText(getdata('cd0ddf0d24e0291f18d0d519d04700af', moneyname, moneyclass))
+    def cur_inq(self):
+        self.display_bar1.setText(getdata('cd0ddf0d24e0291f18d0d519d04700af', self.moneyname, self.moneyclass)+'RMB')
 
     def from_money(self, former_money):
         self.frommoney =  getmoneyname(former_money)
@@ -44,7 +44,7 @@ class Exchange(QWidget, Ui_Exchange):
         self.moneyname = int(cur_name)-1
 
     def moneyclasses(self, moneyclass):
-        self.moneyclass = int(moneyclass)
+        self.moneyclass = int(moneyclass)+1
 
     def inq(self):
         self.display_bar3.setText(cur_exchange('cd0ddf0d24e0291f18d0d519d04700af', self.frommoney, self.tomoney))
@@ -52,21 +52,14 @@ class Exchange(QWidget, Ui_Exchange):
     def connecter(self):
         self.get_cur_name.currentIndexChanged['QString'].connect(self.showmoneyname)
         self.from_cur.currentIndexChanged['QString'].connect(self.from_money)
-        self.cur_class.currentIndexChanged.connect(self.moneyclasses)
-        self.cur_name.currentIndexChanged.connect(self.name)
+        self.cur_class.currentIndexChanged['int'].connect(self.moneyclasses)
+        self.cur_name.currentIndexChanged['int'].connect(self.name)
         self.to_cur.currentIndexChanged['QString'].connect(self.to_money)
         self.exchange_inquiry.clicked.connect(self.inq)
         self.cur_inquiry.clicked.connect(self.cur_inq)
 
 
-
-
-
-
-
-
 if __name__  == "__main__":
     app = QApplication(sys.argv)
     Ex = Exchange()
-
     sys.exit(app.exec())
